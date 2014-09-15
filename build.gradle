@@ -12,8 +12,8 @@ repositories {
 dependencies {
     compile 'com.sparkjava:spark-core:2.0.0'
     compile 'org.codehaus.groovy:groovy-all:2.3.6'
+ 
 }
-
 
 task runApp (dependsOn: 'classes', type: JavaExec) {
     main = 'net.zarski.sgs.HelloGroovy'

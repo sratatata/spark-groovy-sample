@@ -5,8 +5,6 @@ import spark.Request
 import spark.Response
 import spark.Route;
 
-@Grab('com.sparkjava:spark-core:2.0.0')
-
 import static spark.Spark.*;
 
 get('/hellogroovy'){ req, res ->
