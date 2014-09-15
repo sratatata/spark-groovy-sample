@@ -1,0 +1,21 @@
+apply plugin: 'groovy'
+
+version = '1.0'
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+    compile 'com.sparkjava:spark-core:2.0.0'
+    compile 'org.codehaus.groovy:groovy-all:2.3.6'
+}
+
+
+task runApp (dependsOn: 'classes', type: JavaExec) {
+    main = 'net.zarski.sgs.HelloGroovy'
+    classpath = sourceSets.main.runtimeClasspath
+}
